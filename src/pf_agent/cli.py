@@ -1,4 +1,3 @@
-
 from pathlib import Path
 from typing import Annotated
 
@@ -11,10 +10,9 @@ app = typer.Typer(help="A CLI APP to review code using an AI agent")
 def review(path: Annotated[Path, typer.Argument(exists=True)]):
     """
     Command to review your code.
-    Prints the path for now 
+    Prints the path for now
     """
     typer.echo(f"Would review '{path}'")
-                
 
 
 @app.callback()
